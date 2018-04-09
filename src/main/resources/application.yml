@@ -1,0 +1,16 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: "http://192.168.1.101:9080/eureka/"
+# 设置eureka server 的相关属性 ${EUREKA_URL}
+  server:
+    enable-self-preservation: false  # 关闭eureka server 的自我保护功能，本地环境：faslse ;生产环境：true ，默认值为true
